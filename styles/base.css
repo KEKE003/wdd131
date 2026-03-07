@@ -1,0 +1,35 @@
+main {
+    width: fit-content;
+    align-content: center;
+    grid-column: auto;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+}
+h1 {
+    font-weight: 100;
+}
+header span {
+    display: block;
+}
+nav {
+    background-color: cadetblue;
+    margin: auto;
+    max-width: 840px;
+}
+nav a {
+    display: inline-block;
+    color: beige;
+    text-align: center;
+    padding: 2rem;
+    text-decoration: none;
+}
+
+
+
+
+
