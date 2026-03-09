@@ -1,5 +1,5 @@
 main {
-    width: fit-content;
+    width:max-content;
     align-content: center;
     grid-column: auto;
 }
@@ -19,16 +19,21 @@ header span {
 nav {
     background-color: cadetblue;
     margin: auto;
-    max-width: 840px;
+    width:max-content;
+    column-width: 950px;
 }
-nav a {
-    display: inline-block;
-    color: beige;
-    text-align: center;
-    padding: 2rem;
-    text-decoration: none;
+main img {
+    width: 840px;
+    height: auto;
+    display: block;
+    text-align: right;
 }
-
+section img {
+    width: fit-content;
+    height: auto;
+    display: block;
+    text-align: left;
+}
 
 
 
