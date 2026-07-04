@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 
 
 
@@ -9,12 +10,17 @@
 
 
 
+const currentYearSpan = document.getElementById("current-year");
+if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
+}
 
-const currentYear = new Date().getFullYear();
-document.getElementById("current-year").innerHTML = currentYear;
+const lastModifiedSpan = document.getElementById("last-modified");
+if (lastModifiedSpan) {
+    lastModifiedSpan.textContent =  `Last Modification: ${document.lastModified}`;
+}
 
-const lastModified = document.lastModified;
-document.getElementById("last-modified").innerHTML = document.lastModified;
+});
 
 
 

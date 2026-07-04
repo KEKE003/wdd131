@@ -1,96 +1,99 @@
-* {
-    box-sizing: border-box;
+:root {
+    --primary-color: #003366;
+    --secondary-color: #f4f4f4;
+    --accent-color: #d4af37;
+    --text-color: #333333;
 }
+
 body {
 font-family: "Xanh Mono", monospace;
-font-weight: 400;
-background-color: darkgrey;
-display: inline;
-width: max-content;
+margin: 0;
+padding: 0;
+color: var(--text-color);
+background-color: #ffffff;
 }
-h1 {
-    font-weight: 100;
-    background-color: #ddd;
-    padding: 1rem;
-    border: 1px solid rgb(0, 0, 0 / 10%);
-    font-size: 2rem;
+
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.5rem;
     text-align: center;
 }
-nav {
-    background-color: #69baf0;
-    margin: 0 auto;
-    max-width: 800px;
-}
-nav ul {
-    list-style: none;
-}
-nav a {
+
+#course-title {
     display: block;
-    color: #ddd;
-    text-align:center;
-    padding: 2rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: none;
+    gap: 1.5rem;
+    background-color: #002244;
+    padding: 0.75rem;
+}
+
+nav a {
+    border-radius: 4px;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5rem 1rem;
     text-decoration: none;
 }
 nav a:hover {
-    text-decoration: underline;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
-.active {
-    color: chartreuse;
-}
-/* larger/wider views ***********************/
-@media (min-width: 640px) {
-    nav ul {
-        display:flex;
-    }
-    nav ul a {
-        flex: 1 0 auto;
-    }
-}
+
 main {
-    display:block;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #ddd;
-    box-shadow: (0, 0, 0, 0.1);
-    text-align: center;
-}
-main section cards {
     display: grid;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-h2 img {
-    float: right;
-    display: block;
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--primary-color);
 }
 
-h3 img {
-    display: block;
-    float: left;
-}
-header {
-    background-color: rgba(49, 165, 200, 0.745);
-    padding: 20px;
-    text-align: center;
-    color: #ddd;
-}
-header span {
-    display: block;
-    font-size: large;
-    font-display: block;
+.card {
+    background-color: var(--secondary-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+.card h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
 footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(49, 165, 200, 0.745);
-    color: #ddd;
-    margin-top: 20px;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
 }
-.profile {
-    display: flex;
 
-}
-.country-info {
-    flex: 1;
+footer p {
+    margin: 0.5rem 0;
 }
