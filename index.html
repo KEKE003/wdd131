@@ -6,8 +6,14 @@
         <title>WDD131-Dynamic Web Fundamentals - Kekeletso Nhlapo</title>
         <meta name="description" content="WDD131-Dynamic Web Fundamentals assignment- Kekeletso Nhlapo">
         <meta name="author" content="KEKELETSO NHLAPO">
+
         <link rel="stylesheet" href="styles/base.css">
-        <link rel="scripts" href="scripts/getdates.js">
+        <script src="scripts/getdates.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+
     </head>
     <body>
         <header>
@@ -16,32 +22,34 @@
             WDD131-Dynamic Web Fundamentals
         </span>
         <nav>
+            <ul>
                 <a href="https://www.linkedin.com/in/kekeletso-bt-b12aaa365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
                 <a href="https://byupw.instructure.com/">Canvas</a>
                 <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=intro1-p19#intro1 ">Scripture</a>
                 <a href="#">Final Project</a>
+            </ul>
 
         </nav>
         </header>
         <main>
             <h1>Kekeletso Nhlapo</h1>
-            <img src="images/20251020_151749.jpg" alt="Profile picture of Kekeletso Nhlapo" width="200">
-            <p>My name is Kekeletso Nhlapo but you can call me Keke. I am from South Africa, Free State in a small town called Bethlehem. I am the youngest of three children, and I have a dog. His name is Sawyer and he is a German Shepherd. I served a mission in Ghana, the best 18 months of my life! I got to learn more about my Savior, the gospel, myself, and the Ghanaian culture, plus the language! I am a student at Brigham Young University-Idaho. I am currently studying Software Development. I have always been passionate about technology and programming, and I am excited to further my knowledge and skills in this field.</p>
-            <section>
+            <section class="card">
                 <h2>About Me</h2>
+                <img src="images/profile2.png" alt="Profile picture of Kekeletso Nhlapo" width="200">
+                <p>My name is Kekeletso Nhlapo but you can call me Keke. I am from South Africa, Free State in a small town called Bethlehem. I am the youngest of three children, and I have a dog. His name is Sawyer and he is a German Shepherd. I served a mission in Ghana, the best 18 months of my life! I got to learn more about my Savior, the gospel, myself, and the Ghanaian culture, plus the language! I am a student at Brigham Young University-Idaho. I am currently studying Software Development. I have always been passionate about technology and programming, and I am excited to further my knowledge and skills in this field.</p>
+            </section>
+
+            <section class="card">
+                <h3>South Africa</h3>
                 <img src="images/southafricanflag.webp" alt="Picture of the official South African Flag">
                 <p>South Africa  is a diverse "Rainbow Nation" with 12 official languages, three capital cities(Pretoria, Cape Town, Bloemfontein), and a rich history of cultures and traditions. It is known for landmark achievements like the first human heart transplant in 1967, hosting the 2010 FIFA World Cup, and producing the world's largest diamond. The South African national rugby team, the "Springboks" is the only team to have won the Rugby World Cup 4 times and has never lost a final. Rugby is the one sport that brings South Africans together.</p>
             </section>
         </main>
         <footer>
-            <span 
-                id="current-year">
-                ©2026 🎀 Kekeletso Nhlapo 🎀 South Africa | 
-            </span>
-            <span 
-            id="last-modified">
-            Last Modified
-        </span>
+            <script src="scripts/getdates.js"></script>
+            <p>©<span id="currentYear"></span> | 🎀 Kekeletso Nhlapo 🎀 | South Africa 📍</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+            <script src="scripts/getdates.js"></script>
         </footer>
     </body>
 </html>

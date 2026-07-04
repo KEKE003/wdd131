@@ -1,40 +1,96 @@
-main {
-    width:max-content;
-    align-content: center;
-    grid-column: auto;
-}
 * {
     box-sizing: border-box;
 }
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 400;
+font-family: "Xanh Mono", monospace;
+font-weight: 400;
+background-color: darkgrey;
+display: inline;
+width: max-content;
 }
 h1 {
     font-weight: 100;
+    background-color: #ddd;
+    padding: 1rem;
+    border: 1px solid rgb(0, 0, 0 / 10%);
+    font-size: 2rem;
+    text-align: center;
+}
+nav {
+    background-color: #69baf0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+nav ul {
+    list-style: none;
+}
+nav a {
+    display: block;
+    color: #ddd;
+    text-align:center;
+    padding: 2rem;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.active {
+    color: chartreuse;
+}
+/* larger/wider views ***********************/
+@media (min-width: 640px) {
+    nav ul {
+        display:flex;
+    }
+    nav ul a {
+        flex: 1 0 auto;
+    }
+}
+main {
+    display:block;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ddd;
+    box-shadow: (0, 0, 0, 0.1);
+    text-align: center;
+}
+main section cards {
+    display: grid;
+}
+
+h2 img {
+    float: right;
+    display: block;
+}
+
+h3 img {
+    display: block;
+    float: left;
+}
+header {
+    background-color: rgba(49, 165, 200, 0.745);
+    padding: 20px;
+    text-align: center;
+    color: #ddd;
 }
 header span {
     display: block;
+    font-size: large;
+    font-display: block;
+    text-align: center;
 }
-nav {
-    background-color: cadetblue;
-    margin: auto;
-    width:max-content;
-    column-width: 950px;
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(49, 165, 200, 0.745);
+    color: #ddd;
+    margin-top: 20px;
 }
-main img {
-    width: 840px;
-    height: auto;
-    display: block;
-    text-align: right;
+.profile {
+    display: flex;
+
 }
-section img {
-    width: fit-content;
-    height: auto;
-    display: block;
-    text-align: left;
+.country-info {
+    flex: 1;
 }
-
-
-
-
