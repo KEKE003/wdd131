@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #1b365d;
+    --accent-color: #d1a153;
+    --text-color: #333333;
+    --bg-color: #f4f4f6;
+    --card-bg: #ffffff;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: medium;
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    width: 100%;
+    display: none;
+}
+
+.div figure {
+    display: flexbox;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+button#menu::before {
+    content: "/2630";
+
+}
+
+button#menu.open::before {
+    content: "❌";
+    font-size: 1.5rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.navigation li a {
+    display: block;
+    padding: 0.75rem;
+    color: white;
+    font-weight: bold;
+    transition: backgroind 0.3s, color 0.3s;
+}
+
+.navigation li a:hover, .navigation li :active {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+main h2 {
+    font-family: var(--heading-font);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    background-color: var(--card-bg);
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: scale(1.02);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fdfdfd;
+    border-top: 1px solid #eeeeee;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: auto;
+    font-size: small;
+    border-top: 4px solid var(--accent-color);
+}
+
+footer p {
+    margin: 0.25rem 0;
+}

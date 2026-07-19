@@ -1,0 +1,32 @@
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+button#menu {
+    display: none;
+}
+
+nav {
+    display: block;
+    width: auto;
+}
+
+.navigation {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.navigation li a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.gallery {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
