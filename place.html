@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Discover South Africa</title>
+        <meta name="description" content="WDD 131 assignment showing data, weather, and highlights of South Africa.">
+
+        <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css" media="min-width: 780px">
+        <script src="scripts/place.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>South Africa</h1>
+        </header>
+        <main>
+            <div class="hero">
+                <img src="images/coatofarms.jpg" alt="Coat of arms of South Africa">
+            </div>
+            <section class="data-card">
+                <h2>Data</h2>
+                <nav class="data-nav">
+                    <ul>
+                        <li><strong>Area:</strong> 1,221,037 km²</li>
+                        <li><strong>Population:</strong> 60.14 million</li>
+                        <li><strong>Capital:</strong> Pretoria</li>
+                        <li><strong>Language:</strong> English (primary), Afrikaans, Zulu, Xhosa, and 9 other official languages</li>
+                        <li><strong>Currency:</strong> South African Rand (ZAR)</li>
+                        <li><strong>Time Zone:</strong> South Africa Standard Time (SAST) UTC+2</li>
+                        <li><strong>Calling Code:</strong> +27</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="weather-card">
+                <h2>Weather ⛅</h2>
+                <nav class="weather-nav">
+                   <ul>
+                        <li><strong>Temperature:</strong><span id="temp">25</span>°C</li>
+                        <li><strong>Conditions:</strong>Sunny</li>
+                        <li><strong>Wind:</strong><span id="wind">10</span> km/h</li>
+                        <li><strong>Wind Chill:</strong><span id="windchill">5.5</span>°C</li>
+                    </ul>
+                </nav>
+            </section>
+        </main>
+        <footer>
+            <p>©️<span id="currentyear"></span> | South Africa | 🎀Kekeletso Nhlapo🎀. All rights reserved.</p>
+            <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+        </footer>
+    </body>
+    </html>
