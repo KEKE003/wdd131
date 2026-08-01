@@ -80,15 +80,15 @@ button#menu.open::before {
     align-items: center;
 }
 
-.navigation li a {
+.navigation a {
     display: block;
     padding: 0.75rem;
     color: white;
     font-weight: bold;
-    transition: backgroind 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
-.navigation li a:hover, .navigation li :active {
+.navigation a:hover, .navigation a :active {
     background-color: var(--accent-color);
     color: var(--primary-color);
 }
