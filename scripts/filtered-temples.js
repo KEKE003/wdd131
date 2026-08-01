@@ -94,6 +94,11 @@ const temples = [
   },
 ];
 
+const gallery = document.getElementById("temple-gallery");
+const galleryTitle = document.getElementById("gallery-title");
+const mainNav = document.getElementById("main-nav");
+const menuToggle = document.getElementById("menu-toggle");
+
 function displayTemples(filteredTemples) {
   const gallery = document.getElementById("temple-gallery");
   if (!gallery) return;
