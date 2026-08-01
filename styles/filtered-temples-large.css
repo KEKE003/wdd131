@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+    button#menu-toggle {
+        display: none;
+    }
+
+    #main-nav {
+        display: block;
+        width: auto;
+    }
+ 
+    #main-nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD131 - Filtered Temples Album</title>
+        <meta name="description" content="A responsive temple album page built for WDD131.">
+
+        <link rel="stylesheet" href="styles/filtered-temples.css">
+        <link rel="stylesheet" href="styles/filtered-temples-large.css" media="min-width: 640px">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <script src="scripts/filtered-temples.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Latter-day Saint Temples Album</h1>
+            <button id="menu-toggle" aria-label="Toggle Menu"></button>
+            <nav id="main-nav">
+                <a href="#" id="filter-home" class="active">Home</a>
+                <a href="#" id="filter-old">Old</a>
+                <a href="#" id="filter-new">New</a>
+                <a href="#" id="filter-large">Large</a>  
+                <a href="#" id="filter-small">Small</a>
+            </nav>
+        </header>
+        <main>
+            <h2 id="gallery-title">Home</h2>
+            <div id="temple-gallery" class="gallery-grid">
+            </div>
+        </main>
+        <footer>
+            <p>©️copy<span id="current-year"></span> | 🎀Kekeletso Nhlapo🎀 | South Africa | All rights reserved.</p>
+            <p><span id="lastModified"></span></p>
+        </footer>
+    </body>
+</html>
