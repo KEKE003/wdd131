@@ -63,7 +63,7 @@ button#menu {
 }
 
 button#menu::before {
-    content: "/2630";
+    content: "☰";
 
 }
 
