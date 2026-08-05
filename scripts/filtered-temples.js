@@ -82,7 +82,7 @@ const temples = [
     dedicated: "2019, March, 10",
     area: 15000,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-lds-273999-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/images/rome-italy-temple-3548.jpg"
   },
   {
     templeName: "Salt Lake City Utah",
@@ -90,7 +90,7 @@ const temples = [
     dedicated: "1893, April, 6",
     area: 10730,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/images/salt-lake-temple.png"
   },
 ];
 
@@ -101,7 +101,7 @@ const menuToggle = document.getElementById("menu-toggle");
 
 function displayTemples(filteredTemples) {
   const gallery = document.getElementById("temple-gallery");
-  if (!gallery) return;
+  if (!gallery) return; 
 
   filteredTemples.forEach(temple => {
     const card = document.createElement("section");
