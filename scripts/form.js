@@ -6,12 +6,15 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+
     const productSelect = document.getElementById("product-name");
+
     if (productSelect) {
-        productSelect.forEach (product => {
-            const option = document.createElement(option);
+        products.forEach (product => {
+            const option = document.createElement("option");
             option.value = product.id;
             option.textContent = product.name.replace (/\b\w/g,c => c.toUpperCase());
+            productSelect.appendChild(option);
         });
     }
 

@@ -1,14 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let reviewCount = localStorage.getItem("reviewsCompleted");
 
-    if(reviewCount === null) {
-        reviewCount = 0;
-    }
+    let reviewCount = Number(localStorage.getItem("reviewSubmissionCount")) || 0;
+    reviewCount++;
+    localStorage.setItem("reviewSubmissionCount", reviewCount);
 
-    reviewCount = parseInt(reviewCount) + 1;
-    localStorage.setItem("reviewsCompleted", reviewCount);
-
-    const counterDisplay = document.getElementById("review-counter");
+    const counterDisplay = document.getElementById("counter-value");
     if(counterDisplay) {
         counterDisplay.textContent = reviewCount;
     }
