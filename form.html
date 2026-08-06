@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Review Form</title>
+        <meta name="description" content="Product Review Form">
+        <meta name="author" content="Kekeletso Nhlapo">
+
+        <link rel="stylesheet" href="styles/form.css">
+        <script src="scripts/form.js" defers></script>
+    </head>
+    <body>
+        <header>
+            <h1>Product Review</h1>
+        </header>
+        <main>
+            <form method="get" action="review.html">
+                <fieldset>
+                
+                    <div class="form-control">
+                        <label for="product-name">Product Name<span class="required">*</span></label>
+                        <select id="product-name" name="ProductName" required>
+                            <option value="" disabled selected>Select a Product...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-control">
+                        <span class="label-heading">Overall Rating<span class="required">*</span></span>
+                        <div class="rating-container">
+                            <label>
+                                <input type="radio" id="star1" name="rating" value="1" required>
+                                <span class="star-label">1 &star;</span>
+                            </label>
+                            <label>
+                                <input type="radio" id="star2" name="rating" value="2" required>
+                                <span class="star-label">2 &star; &star;</span>
+                            </label>
+                            <label>
+                                <input type="radio" id="star3" name="rating" value="3" required>
+                                <span class="star-label">3 &star; &star; &star;</span>
+                            </label>
+                            <label>
+                                <input type="radio" id="star4" name="rating" value="4" required>
+                                <span class="star-label">4 &star; &star; &star; &star;</span>
+                            </label>
+                            <label>
+                                <input type="radio" id="star5" name="rating" value="5" required>
+                                <span class="star-label">5 &star; &star; &star; &star; &star;</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="date-installation">Date of Installation<span class="required">*</span></label>
+                        <input type="date" id="date-installation" name="dateInstallation" required>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="features">Which feature did you find useful? (Check all that apply)<span class="required">*</span></label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="featPerformance" name="features" value="performance">Performance
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="featDurability" name="feature" value="durability">Durability
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="featEaseofUse" name="feature" value="ease-of-use">Ease of Use
+                        </label>
+                        <label class="checkbox-abel">
+                            <input type="checkbox" id="featDesign" name="feature" value="design">Design
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="writtenReview">Written Review (Optional)</label>
+                        <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Share your experience with this product..."></textarea>
+
+                        <label for="userName">Your Name (Optional)</label>
+                        <input type="text" id="userName" name="userName" placeholder="e.g. Name">
+                    </div>
+                </fieldset>   
+
+                <input type="submit" value="Submit Review" class="submit-btn">
+            </form>
+        </main>
+        <footer>
+            <p>&copy;<span id="year"></span> | 🎀 Kekeletso Nhlapo 🎀 | South Africa📍 | All rights reserved.</p>
+            <p>Last Modified:<span id="lastModified"></span></p>
+        </footer>
+    </body>
+</html>
