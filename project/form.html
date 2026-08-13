@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The BrightSide Orbit | Share Your Story</title>
+    <meta name="description" content="An interactive mental training platform focused on realistic optimism tools.">
+    <meta name="author" content="Kekeletso Nhlapo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🌞The BrightSide Orbit</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="form.html" class="active">Share Your Spark</a>
+            <a href="siteplan.html">Site Plan</a>
+        </nav>
+    </header>
+    <main>
+        <section class="form-container">
+                <h3>🌟Share Your Spark</h3>
+                <p>Help us spread light! Submit a true story of local kindness, community support, or human resilience.</p>
+                <div class="form-feedback" role="status" aria-live="polite"></div>
+                <form id="sighting-form"   action="index.html" method="get">
+
+                    <fieldset>
+                        <label for="observer-name">Your Name: </label>
+                        <input type="text" id="observer-name" name="observerName" required>
+                    
+                        <label for="observer-email">Email Address: </label>
+                        <input type="email" id="observer-email" name="observerEmail" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="object-type">Story Category: </label>
+                        <select id="object-type" name="objectType" required>
+                            <option value="">---Choose Category---</option>
+                            <option value="kindness">Acts of Kindness❤️‍🩹</option>
+                            <option value="inspiration">Inspirational Personal Milestones🌱</option>
+                            <option value="innovations">Medical & Tech Advancements🔬</option>
+                            <option value="community">Neighborhood Unity🫂</option>
+                        </select>
+
+                        <div class="form-group">
+                        <label for="story-content">What brightened your mood today?</label>
+                        <textarea id="story-content" name="storyContent" rows="10" required></textarea>
+                        </div>
+                    
+                        <label for="sky-conditions">Joy Level Impact (1 - 5): </label>
+                        <input type="number" id="sky-conditions" name="skyConditions" min="1" max="5" required>
+                    </fieldset>
+                    <button type="submit" class="submit-btn">🚀 Publish Into Orbit</button>
+                </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span> | 🎀 Kekeletso Nhlapo 🎀 | The BrightSide Orbit🌞| <a href="references.html">References</a>| All rights reserved.</p>
+        <p>LastModified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

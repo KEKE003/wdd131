@@ -1,16 +1,21 @@
-:root {
+ :root {
     --primary-color: #6190d1;
     --secondary-color: #ecb74d;
     --bg-color: #cdd2d6;
     --text-color: #4c4f53;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
+    line-height: 1.5;
 }
 
 header {
@@ -34,10 +39,101 @@ header h2 {
     letter-spacing: 1px;
 }
 
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+nav a:hover, nav a.active {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
 main {
     max-width: 900px;
     margin: 2rem auto;
     padding: 0 1rem;
+}
+
+#hero {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.event-card {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--text-color);
+}
+
+.event-card.border-kindness {border-top-color: var(--secondary-color);}
+.event-card.border-inspiration {border-top-color: var(--primary-color);}
+.event-card.border-community {border-top-color: var(--text-color);}
+
+#filter-controls {
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+fieldset {
+    border: 1px solid var(--primary-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    background-color: var(--bg-color);
+}
+
+legend {
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin: 0.8rem 0 0.2rem 0;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: var(--bg-color);
+    border: 1px solid rgb(7, 0, 0);
+    color: var(--text-color);
+    border-radius: 4px;
 }
 
 section {
@@ -103,7 +199,7 @@ sketch-rect {
     font-size: small;
     font-weight: bold;
     color: #475569;
-}
+ }
 
 .desktop-grid {
     display: flex;
@@ -124,24 +220,33 @@ footer {
     text-align: center;
     font-size: small;
     padding: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
-.optimism-form {
+footer a {
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     margin-top: 1.5rem;
 }
 
-.main-layout-grid {
+.grid-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-top: 1.25rem;
 }
 
-.content-feed , .card{
+#dashboard , .card{
     background-color: white;
     border-left: 4px solid var(--secondary-color);
     padding: 1.25rem;
@@ -227,7 +332,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .content-feed {
+    .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -21,113 +21,45 @@
                 <img src="images/siteplan.png" alt="The BrightSide Orbit Site Logo." loading="lazy">
             </div>
             <nav>
-                <button class="menu-toggle" aria-label="Toggle Menu">&#9667;</button>
-                <ul class="nav-links">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="#daily-uplift">Daily Uplift</a>
-                    <a href="#global-news">Global News</a>
-                    <a href="#wellness">Wellness Tips</a>
-                </ul>
+                <a href="index.html" class="active">Home</a>
+                <a href="form.html">Share Your Spark</a>
+                <a href="siteplan.html">Site Plan</a>
             </nav>
         </header>
         <main>
-            <section class="hero-banner">
-                <div class="hero-content">
-                    <h2>Your Daily Escape from Doomscrolling</h2>
-                    <p>Welcome to a peaceful digital sanctuary curated to bring you verified positive updates, scientific breakthroughs, and practical mental wellness tools.</p>
-                    <a href="#daily-uplift" class="cta-button">Explore Positive News</a>
-                </div>
+            <section id="hero">
+                <h2>Your Daily Escape from Doomscrolling</h2>
+                <p>Welcome to a peaceful digital sanctuary curated to bring you verified positive updates, scientific breakthroughs, and practical mental wellness tools.</p>
             </section>
 
-            <div class="main-layout-grid">
-                <div class="content-feed">
-                    <section id="daily-uplift" class="card">
-                        <h3>🌞 Daily Uplift: Highlight Story</h3>
-                        <article>
-                            <h4>Local Communities Restore Historical Forest Ecosystems</h4>
-                            <p>Volunteers across the region have successfully replanted over ten thousand native trees this quarter, bringing back localized wildlife species that haven't been spotted in decades!</p>
-                        </article>
-                    </section>
+            <section id="scenarios">
+                <h3>Scenarios</h3>
+                <ul>
+                    <li>I want to start a small gratitude habit. Is there a simple tracker or daily reminder tool available on this site?</li>
+                    <li>I need to share an uplifting story with a friend who has been going through a tough time. Can I get a link of an uplifting story? </li>
+                    <li>Where can I find a quick, action-based daily exercise to help improve my mood when I feel overwhelmed?</li>
+                    <li>How can I stay informed about positive developments in my community?</li>
+                </ul>
+            </section>
 
-                    <section id="global-news" class="card">
-                        <h3>🌐 Global Breakthroughs</h3>
-                        <article>
-                            <h4>Clean Energy Milestones Surpassed Ahead of Target</h4>
-                            <p>New reports indicate that solar and wind grid integration has hit record-high efficiencies this year, significantly cutting dependency on fossil alternative faster than initial models predicted.</p>
-                        </article>
-                    </section>
-
-                    <section id="wellness" class="card">
-                        <h3>🧠 Mind & Wellness Habits</h3>
-                        <article>
-                            <h4>Five Digital Fasting Tips for Higher Focus</h4>
-                            <p>Swapping early morning phone habits with focused breathing cycles can reduce mid-day stress indicators by nearly thirty percent. Try our simple five-minute routine today!</p>
-                        </article>
-                    </section>
+            <section id="dashboard">
+                <h2>Explore Positive News</h2>
+                <div id="filter-controls">
+                    <button data-type="all">All Stories</button>
+                    <button data-type="kindness">Kindness</button>
+                    <button data-type="inspiration">Inspiration</button>
+                    <button data-type="community">Community</button>
                 </div>
-
-                <section id="submissipn-container">
-                    <h3>🌟Share Your Spark</h3>
-                    <p>Help us spread light! Submit a true story of local kindness, community support, or human resilience.</p>
-                    <div class="form-feedback" role="status" aria-live="polite"></div>
-                    <form action="#" method="post" class="optimism-form">
-                        <div class="form-group">
-                            <label for="user-name">Your Name(Optional): </label>
-                            <input type="text" id="user-name" name="userName" placeholder="Enter Your Name Here...">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="user-email">Email Address: </label>
-                            <input type="email" id="user-email" name="userEmail" required placeholder="Enter Your Email Here...">
-                        </div>
-
-                        <div class="form-group">
-                            <label id="story-category">Story Category: </label>
-                            <select id="story-category" name="storyCategory" required>
-                                <option value="kindness">Acts of Kindness❤️‍🩹</option>
-                                <option value="environment">Environmental Wellness🌱</option>
-                                <option value="innovations">Medical & Tech Advancements🔬</option>
-                                <option value="community">Neighborhood Unity🫂</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="story-content">What brightened your mood today?</label>
-                            <textarea id="story-content" name="storyContent" rows="6" required placeholder="Type Here..."></textarea>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="consent" name="consentCheck" required>
-                            <label for="consent">I verify that this story is true and give permission to publish it.</label>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Launch Into Orbit</button>
-                    </form>
-                </section>
-
-                <section id="scenarios">
-                    <h3>Scenarios</h3>
-                    <ul>
-                        <li>I want to start a small gratitude habit. Is there a simple tracker or daily reminder tool available on this site?</li>
-                        <li>I need to share an uplifting story with a friend who has been going through a tough time. Can I get a link of an uplifting story? </li>
-                        <li>Where can I find a quick, action-based daily exercise to help improve my mood when I feel overwhelmed?</li>
-                        <li>How can I stay informed about positive developments in my community?</li>
-                    </ul>
-                </section>
-                <aside class="sidebar">
-                    <section class="widget newsletter-box">
-                        <h3>BrightSide Orbit Newsletter</h3>
-                        <p>Get a weekly dose of pure, verified positivity delivered straight to your inbox.</p>
-                        <form action="#" method="get" class="signup-form">
-                            <input type="email" placeholder="Enter your email here..." required aria-label="Email Address">
-                            <button type="submit" class="submit-btn">Be part of our orbit</button>
-                        </form>
-                    </section>
-                </aside>
-            </div>
+                <div id="event-container" class="grid-container"></div>
+            </section>
+            <section id="status-panel">
+                <h2>Your Support Status</h2>
+                <p id="visit-counter">Loading greeting...</p>
+            </section>
         </main>
         <footer>
-            <p>&copy;<span id="year"></span> | 🎀 Kekeletso Nhlapo 🎀 | The BrightSide Orbit🌞| All rights reserved.</p>
+            <p>&copy;<span id="year"></span> | 🎀 Kekeletso Nhlapo 🎀 | The BrightSide Orbit🌞| <a href="references.html">References</a> | All rights reserved.</p>
             <p>LastModified: <span id="lastModified"></span></p>
         </footer>
-    </body>
+        </body>
+        </html>
