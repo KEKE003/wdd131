@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #003366;
-    --secondary-color: #f4f4f4;
-    --accent-color: #d4af37;
+    --primary-color: #3591ee;
+    --secondary-color: white;
+    --accent-color: #f3e6b9;
     --text-color: #333333;
 }
 
 body {
-font-family: "Xanh Mono", monospace;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 margin: 0;
 padding: 0;
 color: var(--text-color);
@@ -16,26 +16,24 @@ background-color: #ffffff;
 header {
     background-color: var(--primary-color);
     color: #ffffff;
-    padding: 1.5rem;
     text-align: center;
 }
 
 #course-title {
-    display: block;
     font-family: "Ubuntu", sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 1rem;
 }
 
 nav {
-    display: flex;
-    gap: 1.5rem;
-    background-color: #002244;
-    padding: 0.75rem;
+    display: block;
+    text-align: center;
+    background-color: var(--text-color);
+    padding: 1.5rem;
 }
 
 nav a {
+
     border-radius: 4px;
     color: #ffffff;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -60,7 +58,7 @@ h1 {
     grid-column: 1 / -1;
     text-align: center;
     font-family: "Ubuntu", sans-serif;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .card {
@@ -73,15 +71,30 @@ h1 {
 }
 
 .card h2 {
-    color: var(--primary-color);
-    margin-top: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: medium;
+    text-align: center;
 }
 
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-top: 1rem;
+
+.card h3 {
+    color: var(--text-color);
+    align-content: flex-end;
+}
+
+
+
+.card h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+    display: contents;
+}
+
+
+li {
+    color: rgb(36, 36, 199);
+    background-color: white;
 }
 
 footer {
@@ -96,3 +109,4 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+ 

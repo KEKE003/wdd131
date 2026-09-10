@@ -3,33 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WDD131 - Temple Album</title>
+        <title>WDD131 | Temple Album</title>
         <meta name="description" content="A responsive temple album page built for WDD131.">
-
-        <link rel="stylesheet" href="styles/temple.css">
-        <link rel="stylesheet" href="styles/temples-large.css" media="min-width: 640px">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/temple.css">
+        <link rel="stylesheet" href="styles/temples-large.css" media="min-width: 768px">
 
         <script src="scripts/temples.js" defer></script>
     </head>
     <body>
         <header>
             <h1>Temple Album</h1>
-            <button id="menu" title="Menu"></button>
-            <nav class="navigation">
-                <a href="#">Home</a>
-                <a href="#">Old</a>
-                <a href="#">New</a>
-                <a href="#">Large</a>  
-                <a href="#">Small</a>
+            <button id="hamburger-btn" aria-label="Toggle navigation menu">&#9776;</button>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Old</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Large</a></li>  
+                    <li><a href="#">Small</a></li>
+                </ul>
             </nav>
         </header>
         <main>
-            <h2>Temple Gallery</h2>
-            <div class="gallery">
+            <h2>Home</h2>
+            <div class="gallery-grid">
                 <figure>
                     <img src="images/temple1.jpg" alt="Salt Lake Temple" loading="lazy">
                     <figcaption>Salt Lake Temple</figcaption>

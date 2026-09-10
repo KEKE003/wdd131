@@ -8,12 +8,18 @@ if (lastModifiedSpan) {
     lastModifiedSpan.textContent =  `Last Modification: ${document.lastModified}`;
 }
 
-const menuButton = document.getElementById("menu");
-const navMenu = document.querySelector("nav");
-if (menuButton && navMenu) {
-    menuButton.addEventListener("click", function() {
-        navMenu.classList.toggle("show");
-        menuButton.classList.toggle("open");
-    });
-}
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const navList = document.getElementById("nav-list");
 
+hamburgerBtn.addEventListener("click", () =>{
+    navList.classList.toggle("active");
+
+    if (navList.classList.contains("active")){
+        hamburgerBtn.innerHTML = "&#10005;";
+        hamburgerBtn.setAttribute("aria-label", "Close navigation menu");
+    }
+    else{
+        hamburgerBtn.innerHTML ="&#9776;";
+        hamburgerBtn.setAttribute("aria-label", "Open navigation menu");
+    }
+});
