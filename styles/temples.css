@@ -8,12 +8,6 @@
     --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (min-width: 768px) {
-    #hamburger-btn {
-        display: none;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -49,13 +43,6 @@ header h1 {
     color: white;
     font-size: 2rem;
     cursor: pointer;
-}
-
-nav ul {
-    width: 100%;
-    display: none;
-    list-style: none;
-    flex-direction: column;
 }
 
 nav ul.active {
@@ -111,6 +98,7 @@ figure {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 figure img {
@@ -128,11 +116,6 @@ figcaption {
     background-color: #fdfdfd;
     color: var(--text-color);
     margin: 0;
-}
-
-figure {
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 figure:hover {

@@ -1,6 +1,9 @@
-#hamburger-btn {
-    display: none;
+@media (min-width: 768px) {
+    #hamburger-btn {
+        display: none;
+    }
 }
+
 nav ul {
     display: flex;
     width: auto;
