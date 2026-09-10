@@ -4,8 +4,14 @@
     --text-color: #333333;
     --bg-color: #f4f4f6;
     --card-bg: #ffffff;
-    --heading-font:'Moxie One', sans-serif;
+    --heading-font: 'Roboto', sans-serif;
     --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (min-width: 768px) {
+    #hamburger-btn {
+        display: none;
+    }
 }
 
 * {
