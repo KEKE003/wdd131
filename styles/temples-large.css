@@ -2,21 +2,21 @@
     #hamburger-btn {
         display: none;
     }
-}
 
-nav ul {
-    display: flex;
-    width: auto;
-    flex-direction: row;
-    background-color: transparent;
-}
+    nav ul {
+        display: flex;
+        width: auto;
+        flex-direction: row;
+        background-color: transparent;
+    }
 
-nav a {
-    padding: 0.5rem 1.5rem;
-    border-bottom: none;
-}
+    nav a {
+        padding: 0.5rem 1.5rem;
+        border-bottom: none;
+    }
 
-.gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
