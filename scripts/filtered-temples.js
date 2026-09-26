@@ -90,6 +90,14 @@ const temples = [
     imageUrl:
     "https://th.bing.com/th/id/OIP.bQsuHWoDuroW5VRbSI1LdwHaFj?w=252&h=189&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
   },
+  {
+    templeName: "Tokyo Japan",
+    location: "Tokyo, Japan",
+    dedicated: "1980, October, 27",
+    area: 53500,
+    imageUrl:
+    "https://th.bing.com/th/id/OIP.xkJMg0HJO9FrNoV5guPAvwHaIw?w=198&h=234&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+  }
 ];
 
 const gallery = document.getElementById("temple-gallery");
