@@ -17,8 +17,6 @@ if (menuButton && navMenu) {
     });
 }
 
-
-
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -48,7 +46,7 @@ const temples = [
     templeName: "Yigo Guam",
     location: "Yigo, Guam",
     dedicated: "2020, May, 2",
-    area: 6861,
+    area: 6861,  
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
   },
@@ -56,11 +54,11 @@ const temples = [
     templeName: "Washington D.C.",
     location: "Kensington, Maryland, United States",
     dedicated: "1974, November, 19",
-    area: 156558,
+    area: 156558, 
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
-  {
+  { 
     templeName: "Lima Perú",
     location: "Lima, Perú",
     dedicated: "1986, January, 10",
@@ -118,20 +116,20 @@ function displayTemples(filteredTemples) {
     gallery.appendChild(card);
   });
 }
-
+    
 function getDedicationYear(dedicatedDate) {
   const dateParts = dedicatedDate.split(", ");
   if (dateParts.length < 2) return null;
   return parseInt(dateParts[0], 10);
 }
-
+ 
 document.querySelectorAll("#main-nav a").forEach(link => {
     link.addEventListener("click", (e) => {
     e.preventDefault();
 
     document.querySelectorAll("#main-nav a").forEach(link => link.classList.remove("active"));
     link.classList.add("active");
-
+ 
     const filterId = link.id;
     let selectedTemples = temples;
 
@@ -164,7 +162,7 @@ document.querySelectorAll("#main-nav a").forEach(link => {
 });
 });
 
-menuToggle.addEventListener("click", () => {
+menuToggle.addEventListener("click", () => { 
     mainNav.classList.toggle("open");
 });
 

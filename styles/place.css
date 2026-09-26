@@ -12,11 +12,13 @@
     margin: 0;
     padding: 0;
 }
-
+ 
 body {
     font-family: var(--font-family);
-    background-color: var(--bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -24,56 +26,97 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
+
 
 h1, h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    background-color: var(--primary-color);
 }
 
+
 main {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    isolation: isolate;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-content: end;
+    gap: 1rem;
+    min-height: 48rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.hero picture {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
 }
 
 .hero img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
 }
 
-.data-card{
-    background-color: var(--card-bg-color);
-    padding: 1.5rem;
+.data-card,
+.weather-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.94);
+    opacity: 0.94;
+    padding: 2px;
     border-radius: 8px;
-    border-top: 5px solid var(--accent-color);
-    float: left;
-    display: block;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 }
 
-.weather-card{
-    background-color: var(--card-bg-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-top: 5px solid var(--accent-color);
-    float: right;
-    display: block;
+.weather-icon-svg {
+    width: 30px;
+    height: 30px;
 }
 
-ul {
-    list-style: none;
+.weather-title::before {
+    content: url("images/weather-icon.svg.webp");
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
-ul li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 0.5rem;
+.weather-title::after {
+    content: "";
 }
+
+@media (min-width: 786px) {
+    header {
+        padding: 2rem;
+    }
+    .weather-icon-svg {
+        display: none;
+    }
+    .weather-title::after {
+
+        content: "🌥️";
+        font-size: 1.5rem;
+        vertical-align: middle;
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+} 
 
 footer {
     background-color: var(--primary-color);

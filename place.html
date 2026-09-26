@@ -9,45 +9,42 @@
 
         <link rel="stylesheet" href="styles/place.css">
         <link rel="stylesheet" href="styles/place-large.css">
-         <script src="scripts/place.js" defer></script>
+
+        <script src="scripts/place.js" defer></script>
     </head>
     <body>
         <header>
             <h1>South Africa</h1>
         </header>
         <main>
+
             <div class="hero">
                 <picture>
-                    <img src="images/coatofarms.webP" alt="Coat of arms of South Africa">
+                    <img src="images/hero-medium.webp" alt="South Africa's national flower">
                 </picture>
+
+                <section class="data-card">
+                    <h2>Data</h2>
+                    <p><strong>Area:</strong> 1,221,037 km²</p>
+                    <p><strong>Population:</strong> 63.52 million</p>
+                    <p><strong>Capital:</strong> Pretoria, Cape Town and Bloemfontein</p>
+                    <p><strong>Language:</strong> English, Afrikaans, Zulu, Xhosa, and 9 other official languages</p>
+                    <p><strong>Currency:</strong> South African Rand (ZAR)</p>
+                    <p><strong>Time Zone:</strong> South Africa Standard Time (SAST) UTC+2</p>
+                    <p><strong>Calling Code:</strong> +27</p>
+                </section>
+
+                <section class="weather-card">
+                    <h2 class="weather-title">Weather</h2>
+                    <p><strong>Temperature:</strong><span id="temp">10</span>°C</p>
+                    <p><strong>Condition:</strong> Sunny</p>
+                    <p><strong>Wind Speed:</strong><span id="wind-speed"> 4.8</span> km/h</p>
+                    <p id="Wind-chill"><strong>Wind Chill:</strong> N/A</p>
+                </section>
             </div>
-            <section class="data-card">
-                <h2>Data</h2>
-                <ul>
-                    <li><strong>Area:</strong> 1,221,037 km²</li>
-                    <li><strong>Population:</strong> 60.14 million</li>
-                    <li><strong>Capital:</strong> Pretoria</li>
-                    <li><strong>Language:</strong> English (primary), Afrikaans, Zulu, Xhosa, and 9 other official languages</li>
-                    <li><strong>Currency:</strong> South African Rand (ZAR)</li>
-                    <li><strong>Time Zone:</strong> South Africa Standard Time (SAST) UTC+2</li>
-                    <li><strong>Calling Code:</strong> +27</li>
-                </ul>
-            </section>
-            <section class="weather-card">
-                <h2>Weather ⛅</h2>
-                <svg class="weather-icon-mobile" xmlns="http://w3.org" viewBox="0 -960 960 960" width="48" height="48"     fill="currentColor">
-                    <path d="M480-160q-100 0-170-70t-70-170q0-87 53-150.5T429-634q15-84 81-135t150-51q116 0 198 82t82 198q0 12-1 24t-3 24q53 13 87.5 54.5T858-440q0"/>
-                </svg>
-                <ul>
-                    <li><strong>Temperature:</strong><span id="temp">25</span>°C</li>
-                    <li><strong>Conditions:</strong>Sunny</li>
-                    <li><strong>Wind:</strong><span id="wind">10</span> km/h</li>
-                    <li><strong>Wind Chill:</strong><span id="windchill">5.5</span>°C</li>
-                </ul>
-            </section>
         </main>
         <footer>
-            <p>©️<span id="currentyear"></span> | South Africa | 🎀Kekeletso Nhlapo🎀. All rights reserved.</p>
+            <p>©️<span id="current-year"></span> | South Africa | 🎀Kekeletso Nhlapo🎀. All rights reserved.</p>
             <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
         </footer>
     </body>
