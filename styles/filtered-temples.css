@@ -50,6 +50,7 @@ header h1 {
 
 #main-nav a {
     list-style: none;
+    color: white;
     display: flex;
     flex-direction: column;
     width: 100%;

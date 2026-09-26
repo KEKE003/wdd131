@@ -80,7 +80,7 @@ const temples = [
     dedicated: "2019, March, 10",
     area: 15000,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/images/rome-italy-temple-3548.jpg"
+    "https://th.bing.com/th/id/OIP.8Sp8sZWwuQOGd6WimzwW4AHaEo?w=371&h=191&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
   },
   {
     templeName: "Salt Lake City Utah",
@@ -88,7 +88,7 @@ const temples = [
     dedicated: "1893, April, 6",
     area: 10730,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/images/salt-lake-temple.png"
+    "https://th.bing.com/th/id/OIP.bQsuHWoDuroW5VRbSI1LdwHaFj?w=252&h=189&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
   },
 ];
 
@@ -98,9 +98,9 @@ const mainNav = document.getElementById("main-nav");
 const menuToggle = document.getElementById("menu-toggle");
 
 function displayTemples(filteredTemples) {
-  const gallery = document.getElementById("temple-gallery");
   if (!gallery) return; 
 
+  gallery.replaceChildren();
   filteredTemples.forEach(temple => {
     const card = document.createElement("section");
     card.classList.add("temple-card");
@@ -131,18 +131,22 @@ document.querySelectorAll("#main-nav a").forEach(link => {
     link.classList.add("active");
  
     const filterId = link.id;
-    let selectedTemples = temples;
+    let selectedTemples = [...temples];
 
     if (filterId === "filter-home") {
         selectedTemples = temples;
         galleryTitle.textContent = "Home(All Temples)";
     }
     else if (filterId === "filter-old") {
-        selectedTemples = temples.filter(temple => getDedicationYear(temple.dedicated) < 1900);
+        selectedTemples = temples
+          .filter(temple => getDedicationYear(temple.dedicated) < 1900)
+          .sort((first, second) => getDedicationYear(first.dedicated) - getDedicationYear(second.dedicated));
         galleryTitle.textContent = "Old Temples (Before 1900)";
     }
     else if (filterId === "filter-new") {
-        selectedTemples = temples.filter(temple => getDedicationYear(temple.dedicated) >= 2000);
+        selectedTemples = temples
+          .filter(temple => getDedicationYear(temple.dedicated) >= 2000)
+          .sort((first, second) => getDedicationYear(second.dedicated) - getDedicationYear(first.dedicated));
         galleryTitle.textContent = "New Temples (2000 and After)";
     }
     else if (filterId === "filter-large") {
@@ -150,7 +154,9 @@ document.querySelectorAll("#main-nav a").forEach(link => {
         galleryTitle.textContent = "Large Temples (Over 90,000 sq ft)";
     }
     else if (filterId === "filter-small") {
-        selectedTemples = temples.filter(temple => temple.area <= 100000);
+        selectedTemples = temples
+          .filter(temple => temple.area <= 100000)
+          .sort((first, second) => first.area - second.area);
         galleryTitle.textContent = "Small Temples (100,000 sq ft and Under)";
     }
 
